@@ -1,0 +1,12 @@
+---
+
+- hosts: app
+  tasks:
+  - name: Copy New resolv.conf file, backing up the original if it differs from the copied version
+    copy:
+      src: /home/automon/my_project/resolv.conf
+      dest: /root/resolv.conf
+      owner: root
+      group: root
+      mode:  0644
+      backup: yes
