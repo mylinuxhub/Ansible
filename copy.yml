@@ -1,11 +1,11 @@
 ---
 
-- hosts: app
+- hosts: your host name
   tasks:
   - name: Copy New resolv.conf file, backing up the original if it differs from the copied version
     copy:
-      src: /home/automon/my_project/resolv.conf
-      dest: /root/resolv.conf
+      src: path like /root/ntp/ntp.conf
+      dest: path like /etc/ntp.conf
       owner: root
       group: root
       mode:  0644
